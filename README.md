@@ -8,14 +8,16 @@ Reminder that this uses Elm and JavaScript which means if you know neither, it m
 
 To use this, for convenience, you should really install perl if you don't have it, or work on mac or linux.
 
-Use Init.pl to start the React-Native project with the App Name of your choice. I've heard there are restrictions in iOS for renaming so be careful. This will create a config/project_name, be sure to never delete this, it will be used for StartAndroid.pl to work. If you delete it, you will have to either add it or modify Start Android.
+Use **Init.pl** to start the React-Native project with the App Name of your choice. I've heard there are restrictions in iOS for renaming so be careful. This will create a config/project_name, be sure to never delete this, it will be used for StartAndroid.pl to work. If you delete it, you will have to either add it or modify Start Android.
 
-Use CompileElm.pl to compile your app to the public folder as 'app.js'. Note that it is possible to send compiler arguments to this script on run:
+Use **CompileElm.pl** to compile your app to the public folder as 'app.js'. Note that it is possible to send compiler arguments to this script on execution:
 ```
 ./CompileElm.pl --optimize
 ```
 
-Use StartAndroid.pl to run android, this will copy the files in the public server over to the assets and get android ready for you.
+Use **StartAndroid.pl** to run android, this will copy the files in the public server over to the assets and get android ready for you.
+
+Use **StartWebServer.pl** to run a development environment in your browser. This is pratical when you want to have faster development cycles, I think.
 
 ## Important
 This project is loosely based on the [Uno Platform](https://platform.uno/)
