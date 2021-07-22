@@ -1,22 +1,23 @@
 # Elm App Template
 
-The point of this project is to provide an easy way for people to start making single page applications.
+The point of this project is to provide an easy way for people to start making android apps with Elm.
 
-Reminder that this uses Elm and JavaScript which means if you know neither, it might be a bad way to start new projects for you. I recommand [reading about Elm](https://guide.elm-lang.org) first.
+Reminder that this uses Elm and JavaScript which means if you know neither, it might be a bad way to start new projects for you. I recommand [reading about Elm](https://guide.elm-lang.org) first. This project even uses Perl, if you're not familiar with perl, use the scripts as recommended, if you want to do more, you would have to learn more or write them in your language of choice.
 
 ## To run
 
-To compile the app simply use this command in the folder containing the elm.json file:
-elm make src/Pages/* --output=public/app.js
+To use this, for convenience, you should really install perl if you don't have it, or work on mac or linux.
 
-Note: You can change the hierarchy however you'd like when it comes to the public folder, this is just a temporary way of managing things, but it could change in future releases.
+Use **Init.pl** to start the React-Native project with the App Name of your choice. I've heard there are restrictions in iOS for renaming so be careful. This will create a config/project_name, be sure to never delete this, it will be used for StartAndroid.pl to work. If you delete it, you will have to either add it or modify Start Android.
 
-Basically:
+Use **CompileElm.pl** to compile your app to the public folder as 'app.js'. Note that it is possible to send compiler arguments to this script on execution:
 ```
-elm make src/Pages/* --output=public/app.js
-elm reactor
+./CompileElm.pl --optimize
 ```
-Then go into your browser of choice to localhost:8000/public/index.html
+
+Use **StartAndroid.pl** to run android, this will copy the files in the public server over to the assets and get android ready for you.
+
+Use **StartWebServer.pl** to run a development environment in your browser. This is pratical when you want to have faster development cycles, I think.
 
 ## Important
 This project is loosely based on the [Uno Platform](https://platform.uno/)

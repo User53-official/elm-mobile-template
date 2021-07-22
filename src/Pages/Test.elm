@@ -1,4 +1,4 @@
-module Home exposing (main)
+module Test exposing (main)
 
 import Browser exposing (Document)
 import Html
@@ -30,13 +30,10 @@ init shared =
 
 view : Model -> Document Msg
 view _ =
-  { title = "Home"
+  { title = "Test"
   , body =
-      [ Html.div [] [ Html.text "Welcome to the Home Page!" ]
-      , Html.div [] [ Html.text "Try out the menu:" ]
-      , Html.ul []
-          [ Html.li [] [ Html.a [ Html.Attributes.href "#Test" ] [ Html.text "test" ] ]
-          ]
+      [ Html.div [] [ Html.text "Back to home page:" ]
+      , Html.a [ Html.Attributes.href "#Home" ] [ Html.text "Back" ]
       ]
   }
 
